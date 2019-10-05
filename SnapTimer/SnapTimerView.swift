@@ -18,17 +18,17 @@ import UIKit
 
 	internal var animationsPaused = false
 
-	@IBInspectable var mainBackgroundColor: UIColor = UIColor.darkGray {
+	@IBInspectable open var mainBackgroundColor: UIColor = UIColor.darkGray {
 		didSet {
 			self.mainCircleLayer.circleColor = self.mainBackgroundColor.cgColor
 		}
 	}
-	@IBInspectable var centerBackgroundColor: UIColor = UIColor.lightGray {
+	@IBInspectable open var centerBackgroundColor: UIColor = UIColor.lightGray {
 		didSet {
 			self.centerLayer.circleColor = self.centerBackgroundColor.cgColor
 		}
 	}
-	@IBInspectable var borderBackgroundColor: UIColor = UIColor.white {
+	@IBInspectable open var borderBackgroundColor: UIColor = UIColor.white {
 		didSet {
 			self.borderLayer.circleColor = borderBackgroundColor.cgColor
 		}
@@ -37,7 +37,7 @@ import UIKit
 	fileprivate var outerProperty: CGFloat = 0
 	fileprivate var innerProperty: CGFloat = 0
 
-	@IBInspectable var outerValue: CGFloat {
+	@IBInspectable open var outerValue: CGFloat {
 		set {
 			CATransaction.begin()
 			CATransaction.setDisableActions(true)
@@ -50,7 +50,7 @@ import UIKit
 		}
 	}
 
-	@IBInspectable var innerValue: CGFloat {
+	@IBInspectable open var innerValue: CGFloat {
 		set {
 			CATransaction.begin()
 			CATransaction.setDisableActions(true)
