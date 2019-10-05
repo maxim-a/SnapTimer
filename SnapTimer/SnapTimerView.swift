@@ -9,8 +9,8 @@
 import UIKit
 
 @IBDesignable open class SnapTimerView: UIView {
-	static let startAngle = 3/2 * CGFloat(M_PI)
-	static let endAngle = 7/2 * CGFloat(M_PI)
+    static let startAngle = 3/2 * CGFloat.pi
+    static let endAngle = 7/2 * CGFloat.pi
 
 	internal var mainCircleLayer: SnapTimerCircleLayer!
 	internal var centerLayer: SnapTimerCircleLayer!
@@ -171,6 +171,6 @@ import UIKit
 
 	internal class func radianForValue(_ value: CGFloat) -> CGFloat {
 		let realValue = SnapTimerView.sanitizeValue(value)
-		return (realValue * 4/2 * CGFloat(M_PI) / 100) + SnapTimerView.startAngle
+        return (realValue * 4/2 * CGFloat.pi / 100) + SnapTimerView.startAngle
 	}
 }
